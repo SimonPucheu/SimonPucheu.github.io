@@ -1,6 +1,6 @@
 :root {
     --top-nav-color: #000;
-    --top-nav-background-color: #00000030;
+    --top-nav-background-color: transparent;
     --top-caption-color: #444;
     --scroll-nav-color: #fff;
     --scroll-nav-background-color: #000000;
@@ -63,25 +63,26 @@ header nav .title {
     margin: auto 0;
 }
 
-header nav .title #scroller {
+header nav .title .scroller {
+    margin: 0 calc(50% - 15.5px);
     position: absolute;
-    width: 100%;
     bottom: 20px;
     font-size: 9px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-decoration: none;
     color: inherit;
     justify-content: center;
 }
 
-header nav .title #scroller:hover {
-    transition: bottom 500ms;
+header nav .title .scroller:hover {
+    transition: bottom 1000ms;
     bottom: 10px;
 }
 
-header nav .title #scroller:hover .material-symbols-outlined {
-    transition: margin-top 500ms;
+header nav .title .scroller:hover .material-symbols-outlined {
+    transition: margin-top 1000ms;
     margin-top: 10px;
 }
 
@@ -112,7 +113,7 @@ header nav.scroll .title {
     flex-direction: row;
 }
 
-header nav.scroll .title #scroller {
+header nav.scroll .title .scroller {
     display: none;
 }
 
@@ -205,11 +206,6 @@ header nav .hamburg span {
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-
-}
-
-header nav .hamburg:hover span {
-    background-color: #ccc;
 }
 
 @media(max-width: 800px) {
